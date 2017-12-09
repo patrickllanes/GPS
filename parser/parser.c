@@ -15,9 +15,9 @@
 #define FILE_PATH			"/home/lwsdev/Desktop/file.txt"
 
 typedef struct {
-	float latitude;
+	double latitude;
 	char N_S;
-	float longitude;
+	double longitude;
 	char E_W;
 } GPS;
 
@@ -58,7 +58,7 @@ void parse(char *input) {
 					printf("E/W: %c\n", gps_vals.E_W);
 					break;
 				default:
-					printf("Count is: %d\n", count);
+					break;
 			}
 			token = strtok(NULL, ",");
 			count++;
