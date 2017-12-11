@@ -10,13 +10,20 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 #include "drivers/uart.h"
+#include "drivers/gpio.h"
 #include "parser/parser.h"
 
 int main(void) {
 	printf("Starting...\n");
+	int count = 0;
 //	uartInit();
-	parse(NULL);
-	printf("done\n");
-	return EXIT_SUCCESS;
+//	parse(NULL);
+	gpioInit();
+	while(1) {
+		gpioSet(++count%2);
+		sleep(2);
+	}
+	return 0;
 }
