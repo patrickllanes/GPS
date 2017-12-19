@@ -20,3 +20,6 @@ https://releases.linaro.org/components/toolchain/binaries/6.2-2016.11/arm-linux-
 
 ## MISC
 - Coordinate conversion: http://mathforum.org/sarah/hamilton/ham.degrees.html
+
+
+-dk
